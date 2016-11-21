@@ -1,7 +1,8 @@
 Deface::Override.new(
   virtual_path: "spree/users/show",
-  name: "user_info",
-  insert_after: "[data-hook='account_summary'] #user-info dd:first"
+  name: "add_referral_link_and_count",
+  sequence: {after: "add_socials_to_account_summary"},
+  insert_after: "[data-hook='account_summary'] #user-info dd:eq(2)"
 ) do
 <<-CODE.chomp
 <br>
