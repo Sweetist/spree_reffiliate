@@ -19,8 +19,9 @@ Deface::Override.new(
 <br>
 <br>
 <div>
-  <dt>Referred Users</dt>
-  <dd><%= @user.referred_count%></dd>
+  <dt>Referred Users*</dt>
+  <dd><%= @user.referred_activated_users_count%></dd>
+  <dd><em>* "Referred Users" is the number of referred users who made a purchase of $25 or more.</em></dd>
 </div>
 CODE
 end

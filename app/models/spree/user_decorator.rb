@@ -18,6 +18,10 @@ module Spree
       referral.referred_records.count
     end
 
+    def referred_activated_users_count
+      referral.referral_activated_users.count
+    end
+
     def referred?
       !referred_record.try(:referral).try(:user).nil?
     end
